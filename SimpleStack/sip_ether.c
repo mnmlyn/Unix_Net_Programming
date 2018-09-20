@@ -163,7 +163,7 @@ static void sip_init_ethnet(struct net_device *dev)
 		exit(-1);
 	}
 	/*将此套接字绑定到网卡eth1上*/
-	strcpy(dev->name, "eth1");									/*拷贝eth1到name*/
+	strcpy(dev->name, "epn3s0");									/*拷贝eth1到name*/
 	memset(&dev->to, '\0', sizeof(struct sockaddr));				/*清零to地址结构*/
 	dev->to.sa_family = AF_INET;								/*协议族*/
 	strcpy(dev->to.sa_data, dev->name);  						/*to的网卡名称*/
@@ -198,10 +198,10 @@ static void sip_init_ethnet(struct net_device *dev)
 	dev->ip_netmask.s_addr = inet_addr("255.255.255.0");
 	dev->ip_broadcast.s_addr = inet_addr("10.10.10.255");
 #else
-	dev->ip_host.s_addr = inet_addr("172.16.12.250");		/*设置本机IP地址*/
-	dev->ip_gw.s_addr = inet_addr("172.16.12.1");		/*设置本机的网关IP地址*/
-	dev->ip_netmask.s_addr = inet_addr("255.255.255.0");	/*设置本机的子网掩码地址*/
-	dev->ip_broadcast.s_addr = inet_addr("172.16.12.255");/*设置本机的广播IP地址*/
+	dev->ip_host.s_addr = inet_addr("192.168.209.124");		/*设置本机IP地址*/
+	dev->ip_gw.s_addr = inet_addr("192.168.209.126");		/*设置本机的网关IP地址*/
+	dev->ip_netmask.s_addr = inet_addr("255.255.255.248");	/*设置本机的子网掩码地址*/
+	dev->ip_broadcast.s_addr = inet_addr("192.168.209.127");/*设置本机的广播IP地址*/
 #endif
 	dev->input = input;								/*挂机以太网输入函数*/
 	dev->output = output;							/*挂接以太网输出函数*/
