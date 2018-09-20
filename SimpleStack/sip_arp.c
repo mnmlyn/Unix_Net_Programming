@@ -206,6 +206,9 @@ int arp_input(struct skbuff **pskb,struct net_device *dev)
 
 		__be32 ip = 0;
 		DBGPRINT(DBG_LEVEL_TRACE,"==>arp_input\n");
+		
+		      DBGPRINT(DBG_LEVEL_SILENT,"==>arp_input\n");
+			
 		if(skb->tot_len < sizeof(struct sip_arphdr))			/*接收到的网络数据总长度小于ARP头部长度*/
 		{
 			goto EXITarp_input;							/*错误,返回*/

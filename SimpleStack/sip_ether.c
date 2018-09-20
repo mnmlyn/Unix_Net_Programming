@@ -48,7 +48,7 @@ static __u8 input(struct skbuff *pskb, struct net_device *dev)
 	if(samemac(skb->phy.ethh->h_dest, dev->hwaddr) 	/*数据发往本机?*/
 		|| samemac(skb->phy.ethh->h_dest, dev->hwbroadcast))/*广播数据?*/
 	{
-		DBGPRINT(DBG_LEVEL_NOTES,"to up layer\n");
+		DBGPRINT(DBG_LEVEL_NOTES,"eth to up layer\n");
 		switch(htons(skb->phy.ethh->h_proto))			/*查看以太网协议类型*/
 		{
 			case ETH_P_IP:							/*IP类型*/

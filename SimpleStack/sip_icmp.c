@@ -196,6 +196,8 @@ int icmp_reply(struct net_device *dev, struct skbuff *skb)
 int icmp_input(struct net_device *dev,struct skbuff *skb)
 {
 	DBGPRINT(DBG_LEVEL_TRACE,"==>icmp_input\n");
+	
+			DBGPRINT(DBG_LEVEL_SILENT,"==>icmp_input\n");
 		struct sip_icmphdr *icmph;
 
 		switch (skb->ip_summed) 						/*查看是否已经进行了校验和计算*/
