@@ -306,6 +306,9 @@ struct skbuff* ip_frag(struct net_device *dev,struct skbuff*skb)
 int ip_input(struct net_device *dev,struct skbuff *skb)
 {
 	DBGPRINT(DBG_LEVEL_TRACE,"==>ip_input\n");
+	
+		DBGPRINT(DBG_LEVEL_NOTES,"a ip\n");
+		
 		struct sip_iphdr *iph = skb->nh.iph;
 		int retval = 0;
 
