@@ -53,7 +53,7 @@ enum netconn_evt {
 #define PF_INET		AF_INET
 #endif
 
-#define DGB_LEVEL				DBG_LEVEL_IDLE//DBG_LEVEL_ERROR
+#define DGB_LEVEL				DBG_LEVEL_MOMO//DBG_LEVEL_ERROR
 
 #define DBG_LEVEL_IDLE			100
 #define DBG_LEVEL_MOMO			200
