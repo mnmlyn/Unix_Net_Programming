@@ -79,4 +79,7 @@ struct sip_reass
   	__u8 			timer;				/*时间戳*/
 };
 
+extern inline int IP_IS_BROADCAST(struct net_device *dev,__be32 ip);
+
+
 #endif /* SIP_IP_H_ */
