@@ -181,12 +181,12 @@ static void sip_init_ethnet(struct net_device *dev)
 	dev->hwaddr[5] = 0x90;
 #else
 	/*设置MAC地址*/
-	dev->hwaddr[0] = 0x00;
-	dev->hwaddr[1] = 0x0c;
-	dev->hwaddr[2] = 0x29;
-	dev->hwaddr[3] = 0x73;
-	dev->hwaddr[4] = 0x9D;
-	dev->hwaddr[5] = 0x1F;
+	dev->hwaddr[0] = 0x8c;
+	dev->hwaddr[1] = 0x89;
+	dev->hwaddr[2] = 0xa5;
+	dev->hwaddr[3] = 0x25;
+	dev->hwaddr[4] = 0x30;
+	dev->hwaddr[5] = 0xdb;
 #endif
 	dev->hwaddr_len = ETH_ALEN;							/*设置硬件地址长度*/
 #if 0
