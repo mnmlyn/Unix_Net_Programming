@@ -19,6 +19,7 @@ int main(int argc, char* argv[])
 	while(1){
 		skb = NULL;
 		dev->input(skb, dev);
+		printf("1");
 		}
 	close(dev->s);
 
